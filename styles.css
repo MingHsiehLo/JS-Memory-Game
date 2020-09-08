@@ -296,12 +296,18 @@ button:hover {
   position: absolute;
   border-radius: 5px;
 
+  -moz-transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+
   -moz-backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   -o-backface-visibility: hidden;
   -ms-backface-visibility: hidden;
   backface-visibility: hidden;
-  
+
   box-sizing: border-box;
 }
 
@@ -321,16 +327,6 @@ button:hover {
   backface-visibility: hidden;
 
   box-sizing: border-box;
-}
-
-.front-face {
-
-  -moz-transform: rotateY(180deg);
-  -webkit-transform: rotateY(180deg);
-  -o-transform: rotateY(180deg);
-  -ms-transform: rotateY(180deg);
-  transform: rotateY(180deg);
-
 }
 
 .animation {

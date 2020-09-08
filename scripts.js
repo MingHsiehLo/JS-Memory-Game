@@ -103,6 +103,7 @@ function fillGrid(){
     // Back-side img
     const cardBack = document.createElement('img');
     cardBack.setAttribute('src', img);
+    cardBack.classList.add(name);
     // Front-side img
     const cardFront = document.createElement('img');
     cardFront.setAttribute("src", "img/fuji.svg");
@@ -110,7 +111,6 @@ function fillGrid(){
     const memoryCard = document.createElement('div');
     memoryCard.classList.add('memory-card');
     memoryCard.setAttribute('id', idx);
-    memoryCard.classList.add(name);
     memoryCard.addEventListener('click', clickedId);
     const cardWrapper = document.createElement('div');
     cardWrapper.classList.add('card-wrapper');
