@@ -379,7 +379,7 @@ button:hover {
   }
 
   body {
-    height: unset;
+    height: auto;
     width: unset;
     background: rgb(34,193,195);
     background: linear-gradient(180deg, rgba(34,193,195,1) 0%, rgba(255,204,94,1) 100%);
@@ -450,7 +450,7 @@ button:hover {
 }
 
 /* Tablet Styles */
-@media only screen and (min-width: 597px) and (max-width: 1094px) {
+@media only screen and (min-width: 590px) and (max-width: 1094px) {
 
   body {
     background: rgb(34,193,195);
@@ -463,7 +463,7 @@ button:hover {
   }
 
   body {
-    height: unset;
+    height: auto;
     width: unset;
   }
 

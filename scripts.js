@@ -62,7 +62,7 @@ function clickedId() {
           reset[0].classList.add('invisible');
           pyro[0].classList.remove('invisible');
           document.querySelector('body').classList.add('overflow-hidden');
-          document.querySelector('body').classList.add('celebration-height');
+          // document.querySelector('body').classList.add('celebration-height');
           setTimeout(() => {
             pyro[0].classList.add('invisible');
             document.querySelector('body').classList.remove('overflow-hidden');
@@ -154,7 +154,7 @@ function shuffleArray(array) {
 
 // Function to reset all the game and start from zero
 function resetGame(){
-  document.querySelector('body').classList.remove('celebration-height');
+  // document.querySelector('body').classList.remove('celebration-height');
   grid.classList.remove('invisible');
   reset[0].classList.remove('invisible');
   result = 0;
