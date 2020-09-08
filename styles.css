@@ -295,7 +295,13 @@ button:hover {
   padding: 20px;
   position: absolute;
   border-radius: 5px;
+
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
   backface-visibility: hidden;
+  
   box-sizing: border-box;
 }
 
@@ -307,7 +313,13 @@ button:hover {
   border-radius: 5px;
   background: rgb(114,92,221);
   background: linear-gradient(90deg, rgba(114,92,221,1) 0%, rgba(93,119,222,1) 100%);
+
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
   backface-visibility: hidden;
+
   box-sizing: border-box;
 }
 
