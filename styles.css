@@ -453,19 +453,17 @@ button:hover {
 /* Tablet Styles */
 @media only screen and (min-width: 590px) and (max-width: 1094px) {
 
-  body {
-    background: rgb(34,193,195);
-    background: linear-gradient(180deg, rgba(34,193,195,1) 0%, rgba(255,204,94,1) 100%);
-  }
-
   .pyro {
     top: 20%;
     height: unset;
   }
 
   body {
-    height: auto;
-    width: unset;
+    min-height: 100vh !important;
+    background: rgb(34,193,195);
+    background: linear-gradient(180deg, rgba(34,193,195,1) 0%, rgba(255,204,94,1) 100%);
+    height: auto !important;
+    width: unset !important;
   }
 
   .congrats {
