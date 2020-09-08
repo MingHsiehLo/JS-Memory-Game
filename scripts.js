@@ -59,9 +59,11 @@ function clickedId() {
           grid.classList.add('invisible');
           reset[0].classList.add('invisible');
           pyro[0].classList.remove('invisible');
+          document.querySelector('body').classList.add('overflow-hidden');
           setTimeout(() => {
             pyro[0].classList.add('invisible');
-          }, 8000);
+            document.querySelector('body').classList.remove('overflow-hidden');
+          }, 7000);
           const congratsText = document.getElementById('congrats-text');
           congratsText.classList.add('congrats');
           const congratsMessage = document.createElement('p');

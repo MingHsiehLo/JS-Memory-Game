@@ -22,6 +22,11 @@ span {
   display: none !important;
 }
 
+.overflow-hidden {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
 .reset {
   position: relative;
   bottom: 0;
@@ -33,7 +38,16 @@ span {
 }
 
 .reset:active {
+  -moz-transform: scale(0.7);
+  -webkit-transform: scale(0.7);
+  -o-transform: scale(0.7);
+  -ms-transform: scale(0.7);
   transform: scale(0.7);
+
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+  -o-transition: 0.2s ease all;
+  -ms-transition: 0.2s ease all;
   transition: 0.2s ease all;
 }
 
@@ -147,8 +161,23 @@ button:hover {
   height: calc(33.333% - 10px);
   margin: 5px;
   position: relative;
+
+  -moz-transform: scale(1);
+  -webkit-transform: scale(1);
+  -o-transform: scale(1);
+  -ms-transform: scale(1);
   transform: scale(1);
+
+  -moz-transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
   transform-style: preserve-3d;
+  
+  -moz-transition: transform 0.5s;
+  -webkit-transition: transform 0.5s;
+  -o-transition: transform 0.5s;
+  -ms-transition: transform 0.5s;
   transition: transform 0.5s;
 }
 
@@ -165,27 +194,74 @@ button:hover {
   width: 100%;
   height: 100%;
   position: relative;
+
+  -moz-transform: scale(1);
+  -webkit-transform: scale(1);
+  -o-transform: scale(1);
+  -ms-transform: scale(1);
   transform: scale(1);
+
+  -moz-transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
   transform-style: preserve-3d;
+  
+  -moz-transition: 0.5s ease all;
+  -webkit-transition: 0.5s ease all;
+  -o-transition: 0.5s ease all;
+  -ms-transition: 0.5s ease all;
   transition: 0.5s ease all;
+
   box-shadow: 1px 1px 1px rgba(0,0,0,.3);
   border-radius: 5px;
 }
 
 .memory-card:active {
+
+  -moz-transform: scale(0.97);
+  -webkit-transform: scale(0.97);
+  -o-transform: scale(0.97);
+  -ms-transform: scale(0.97);
   transform: scale(0.97);
+
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+  -o-transition: 0.2s ease all;
+  -ms-transition: 0.2s ease all;
   transition: 0.2s ease all;
 }
 
 .memory-card.flip {
+
+  -moz-transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
   transform: rotateY(180deg);
+
+  -moz-transition: transform 0.7s;
+  -webkit-transition: transform 0.7s;
+  -o-transition: transform 0.7s;
+  -ms-transition: transform 0.7s;
   transition: transform 0.7s;
 }
 
 .card-wrapper:hover {
   cursor: pointer;
+
+  -moz-transform: translateY(-5px);
+  -webkit-transform: translateY(-5px);
+  -o-transform: translateY(-5px);
+  -ms-transform: translateY(-5px);
   transform: translateY(-5px);
+
+  -moz-transition: transform 0.5s;
+  -webkit-transition: transform 0.5s;
+  -o-transition: transform 0.5s;
+  -ms-transition: transform 0.5s;
   transition: transform 0.5s;
+
   /* box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2); */
 }
 
@@ -236,7 +312,13 @@ button:hover {
 }
 
 .front-face {
+
+  -moz-transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
   transform: rotateY(180deg);
+
 }
 
 .animation {
@@ -246,16 +328,43 @@ button:hover {
 @keyframes slide-up {
   0% {
       opacity: 0;
+      -moz-transform: translateY(20px);
+      -webkit-transform: translateY(20px);
+      -o-transform: translateY(20px);
+      -ms-transform: translateY(20px);
       transform: translateY(20px);
   }
   100% {
       opacity: 1;
+      -moz-transform: translateY(0);
+      -webkit-transform: translateY(0);
+      -o-transform: translateY(0);
+      -ms-transform: translateY(0);
       transform: translateY(0);
   }
 }
 
 /* Mobile Styles */
 @media only screen and (max-width: 590px) {
+
+  body {
+    background: rgb(34,193,195);
+    background: linear-gradient(180deg, rgba(34,193,195,1) 0%, rgba(255,204,94,1) 100%);
+  }
+
+  .pyro {
+    top: 20%;
+    height: unset;
+  }
+
+  .card-wrapper:hover {
+    cursor: pointer;
+    -moz-transform: none;
+    -webkit-transform: none;
+    -o-transform: none;
+    -ms-transform: none;
+    transform: none;
+  }
 
   .congrats {
     margin: 100px auto 50px auto;
@@ -294,6 +403,7 @@ button:hover {
     margin: 0 auto;
     font-size: 2.5em;
     text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+    text-align: center;
   }
 
   h3 {
@@ -323,10 +433,25 @@ button:hover {
     font-size: 2em;
   }
 
+  .overflow-hidden {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
 }
 
 /* Tablet Styles */
 @media only screen and (min-width: 597px) and (max-width: 1094px) {
+
+  body {
+    background: rgb(34,193,195);
+    background: linear-gradient(180deg, rgba(34,193,195,1) 0%, rgba(255,204,94,1) 100%);
+  }
+
+  .pyro {
+    top: 20%;
+    height: unset;
+  }
 
   body {
     height: unset;
@@ -405,6 +530,11 @@ button:hover {
 
   .reset > i {
     font-size: 1.5em;
+  }
+
+  .overflow-hidden {
+    overflow-y: auto;
+    overflow-x: hidden;
   }
 }
 
