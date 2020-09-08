@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Memory Game</title>
+    <script src="https://kit.fontawesome.com/701442208a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="fireworks.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+  </head>
+
+  <body>
+    <main>
+      <div class="pyro invisible">
+        <div class="before"></div>
+        <div class="after"></div>
+      </div>
+      <div class="main-container">
+        <nav>
+          <a href="https://www.linkedin.com/in/ming-hsieh-lo/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/MingHsiehLo" target="_blank"><i class="fab fa-github"></i></a>  
+          <a href="https://www.instagram.com/minghsiehlo/" target="_blank"><i class="fab fa-instagram"></i></a>
+        </nav>
+        <header>
+          <h1>JS Memory Game</h1>
+          <div>
+            <div>         
+              <h3>Score: <span id="result">0</span></h3>
+              <h3>Movements: <span id="movements">0</span></h3>  
+            </div>
+          </div>
+          <p id="instruction">You must find the pair of each of the cards.</p>
+        </header>
+      </div>
+      <div>
+        <span id="congrats-text" class="no-info"></span>
+        <div class="grid memory-game">
+        </div>
+        <div class="reset">
+          <i onclick="resetGame()" class="fas fa-undo-alt"></i>
+        </div>
+      </div>
+    </main>
+    <script src="scripts.js" charset="utf-8"></script>
+  </body>
+
+</html>

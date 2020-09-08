@@ -1,0 +1,471 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+nav > a > i {
+  font-size: 3em;
+  color: rgb(255, 94, 121);
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+span {
+  margin: 0;
+  font-weight: 600;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.invisible {
+  display: none !important;
+}
+
+.reset {
+  position: relative;
+  bottom: 0;
+  left: 566px;
+  top: -529px;
+  width: 0;
+  cursor: pointer;
+  margin-bottom: -32px;
+}
+
+.reset:active {
+  transform: scale(0.7);
+  transition: 0.2s ease all;
+}
+
+.reset > i {
+  font-size: 2em;
+  font-weight: 600;
+  color: rgb(255, 94, 94);
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background: rgb(34,193,195);
+  background: linear-gradient(90deg, rgba(34,193,195,1) 0%, rgba(255,204,94,1) 100%);
+  height: 100vh;
+  width: 100vw;
+}
+
+h1 {
+  margin: 10vh auto;
+  color: rgb(255, 240, 208);
+  font-size: 3em;
+  border-radius: 5px;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+}
+  
+h3 {
+  margin: 0;
+  font-size: 1.9em;
+  font-weight: 600;
+  color: rgb(56, 31, 148);
+  border-radius: 5px;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+p#instruction {
+  color: rgb(56, 31, 148);
+  font-size: 1.9em;
+  font-weight: 600;
+  max-width: 380px;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+#result, #movements {
+  font-weight: bold;
+}
+
+.no-info {
+  display: none;
+}
+
+.congrats {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 500px;
+}
+
+.congrats > p {
+  color: rgb(56, 31, 148);
+  font-size: 30px;
+  max-width: 380px;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+  margin: 0;
+  text-align: center;
+}
+
+#text-movement {
+  margin-top: 35px;
+}
+
+button {
+  width: 200px;
+  height: 50px;
+  background-color: #6643c7;
+  border-radius: 4px;
+  border: solid 1px #6643c7;
+  color: white;
+  margin-top: 5vh;
+  font-family: 'Inter', sans-serif;
+  font-size: 22px;
+  box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #4b3194;
+  border: solid 1px #4b3194;
+}
+
+.card-wrapper {
+  background: none;
+  width: calc(25% - 10px);
+  height: calc(33.333% - 10px);
+  margin: 5px;
+  position: relative;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.memory-game {
+  width: 540px;
+  height: 540px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  perspective: 1000px;
+}
+
+.memory-card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: 0.5s ease all;
+  box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+  border-radius: 5px;
+}
+
+.memory-card:active {
+  transform: scale(0.97);
+  transition: 0.2s ease all;
+}
+
+.memory-card.flip {
+  transform: rotateY(180deg);
+  transition: transform 0.7s;
+}
+
+.card-wrapper:hover {
+  cursor: pointer;
+  transform: translateY(-5px);
+  transition: transform 0.5s;
+  /* box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2); */
+}
+
+.daruma {
+  background: rgb(227, 231, 177);
+}
+
+.ninja {
+  background: rgb(177, 231, 227);
+}
+
+.fish {
+  background: rgb(231, 208, 177);
+}
+
+.omamori {
+  background: rgb(177, 200, 231);
+}
+
+.origami {
+  background: rgb(188, 231, 177);
+}
+
+.sushi {
+  background: rgb(231, 177, 231);
+}
+
+.front-face {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  position: absolute;
+  border-radius: 5px;
+  backface-visibility: hidden;
+  box-sizing: border-box;
+}
+
+.back-face {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  position: absolute;
+  border-radius: 5px;
+  background: rgb(114,92,221);
+  background: linear-gradient(90deg, rgba(114,92,221,1) 0%, rgba(93,119,222,1) 100%);
+  backface-visibility: hidden;
+  box-sizing: border-box;
+}
+
+.front-face {
+  transform: rotateY(180deg);
+}
+
+.animation {
+  animation: slide-up 0.8s ease-in-out;
+}
+
+@keyframes slide-up {
+  0% {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 590px) {
+
+  body {
+    height: unset;
+    width: unset;
+  }
+
+  .card-wrapper {
+    width: calc(25% - -14px);
+    height: calc(33.333% - 44px);
+  }
+
+  main > div:last-child {
+    width: 100%;
+  }
+
+  nav {
+    margin: 25px auto;
+    width: 100%;
+  }
+
+  nav > a > i {
+    font-size: 1.5em;
+  }
+
+  .memory-game {
+    width: 100%;
+    justify-content: center;
+  }
+
+  h1 {
+    margin: 0 auto;
+    font-size: 1.5em;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+  }
+
+  h3 {
+    font-size: 1em;
+  }
+
+  header > div > div {
+    margin: 5px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  p#instruction {
+    font-size: 1em;
+    margin: 0 0 10px 0;
+    text-align: center;
+  }
+
+  .reset {
+    position: unset;
+    margin: 48px auto 25px auto;
+    width: 32px;
+  }
+
+  .reset > i {
+    font-size: 1.2em;
+  }
+
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 597px) and (max-width: 1094px) {
+
+  body {
+    height: unset;
+    width: unset;
+  }
+
+  .congrats {
+    margin: 50px auto;
+  }
+
+  main {
+    height: unset;
+  }
+
+  nav {
+    margin: 25px auto;
+  }
+
+  nav > a > i {
+    font-size: 1.8em;
+  }
+
+  .memory-game {
+    margin-bottom: 25px;
+    margin: 25px auto 0 auto;
+    width: 600px;
+    height: 600px;
+  }
+
+  h1 {
+    font-size: 1.5em;
+    margin: 0;
+    text-align: center;
+  }
+
+  h3 {
+    font-size: 1.2em;
+  }
+
+  p#instruction {
+    font-size: 1.2em;
+    margin: 0 0 10px 0;
+    max-width: 500px;
+    text-align: center;
+  }
+
+  .main-container {
+    flex-basis: 100%;
+  }
+
+  main > div:last-child {
+    flex-basis: 100%;
+  }
+
+  header {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  header > div > div {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  header > div {
+    margin: 10px 0;
+  }
+
+  .reset {
+    position: unset;
+    margin: 10px auto 25px auto;
+    width: 32px;
+  }
+
+  .reset > i {
+    font-size: 1.5em;
+  }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 1094px) and (max-width: 1200px) {
+  main {
+    justify-content: center;
+  }
+
+  .main-container {
+    margin-right: 40px;
+  }
+
+  .reset {
+    left: 516px;
+    top: -493px;
+  }
+
+  .memory-game {
+    width: 500px;
+    height: 500px;
+  }
+
+  h1 {
+    font-size: 2.5em;
+  }
+
+  h3 {
+    font-size: 1.8em;
+  }
+}
+
+/* Super Long Screens */
+@media only screen and (min-width: 1400px){
+  .memory-game {
+    width: 640px;
+    height: 640px;
+  }
+
+  .reset {
+    left: 660px;
+    top: -625px;
+  }
+
+  nav > a > i {
+    font-size: 4em;
+  }
+
+  h1 {
+    font-size: 4em;
+  }
+
+  h3 {
+    font-size: 2.5em;
+  }
+
+  p#instruction {
+    font-size: 2.5em;
+  }
+
+  .reset > i {
+    font-size: 3em;
+  }
+
+  .congrats > p {
+    font-size: 40px;
+    max-width: 440px;
+  }
+}
