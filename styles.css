@@ -418,10 +418,11 @@ button:hover {
 
   h3 {
     font-size: 1.2em;
+    color: rgb(255, 217, 134);
   }
 
   header > div > div {
-    margin: 5px 0;
+    margin: 15px 0 5px 0;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -431,6 +432,7 @@ button:hover {
     font-size: 1.2em;
     margin: 0 0 10px 0;
     text-align: center;
+    color: rgb(255, 217, 134);
   }
 
   .reset {
