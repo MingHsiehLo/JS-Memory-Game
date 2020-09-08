@@ -1,6 +1,8 @@
 const grid = document.querySelector(".grid");
 const reset = document.getElementsByClassName('reset');
 const pyro = document.getElementsByClassName('pyro');
+const resetDOM = document.getElementsByClassName('fa-undo-alt');
+resetDOM[0].addEventListener('click', resetGame);
 
 // Deal the cards
 const cardsArray = [
