@@ -379,6 +379,7 @@ button:hover {
   }
 
   body {
+    min-height: 100vh;
     height: auto !important;
     width: unset !important;
     background: rgb(34,193,195);
