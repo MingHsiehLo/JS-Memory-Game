@@ -4,19 +4,6 @@ const pyro = document.getElementsByClassName('pyro');
 const resetDOM = document.getElementsByClassName('fa-undo-alt');
 resetDOM[0].addEventListener('click', resetGame);
 
-// Deal the cards
-const cardsArray = [
-  { name: "fish", img: "img/carp-fish.svg" },
-  { name: "daruma", img: "img/daruma.svg" },
-  { name: "ninja", img: "img/ninja.svg" },
-  { name: "omamori", img: "img/omamori.svg" },
-  { name: "origami", img: "img/origami.svg" },
-  { name: "sushi", img: "img/sushi.svg" }
-]
-.reduce((acc, element) => [...acc, element, element], []);
-
-shuffleArray(cardsArray);
-
 // Variables to track the flipped card and its information
 let cardFlipped = 0;
 const flippedArrId = [];
@@ -29,6 +16,19 @@ let resultDOM = document.getElementById('result');
 let result = 0;
 let movementsDOM = document.getElementById('movements');
 let movements = 0;
+
+// Deal the cards
+const cardsArray = [
+  { name: "fish", img: "img/carp-fish.svg" },
+  { name: "daruma", img: "img/daruma.svg" },
+  { name: "ninja", img: "img/ninja.svg" },
+  { name: "omamori", img: "img/omamori.svg" },
+  { name: "origami", img: "img/origami.svg" },
+  { name: "sushi", img: "img/sushi.svg" }
+]
+.reduce((acc, element) => [...acc, element, element], []);
+
+shuffleArray(cardsArray);
 
 // Function attached to the card to flip it and check up if it's the right pair or not
 function clickedId() {
