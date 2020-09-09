@@ -10,6 +10,8 @@
 
 ![Game Demo](./img/game-demo.gif)
 
+**Check the live version here: https://minghsiehlo.github.io/JS-Memory-Game/**
+
 ## General info
 
 * **DOM Manipulation:** Using JavaScript, the DOM can be easily handled. In this project, the HTML structure is built with createElement and appendChild. The HTML elements are manipulated by selecting them with querySelector and toggling their classes and event listeners. 
