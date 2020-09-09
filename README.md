@@ -32,7 +32,7 @@
 
 ## Acknowledge
 * This repo was inspired by freeCodeCamp and Hackademy tutorials. :heart: 
-* CSS fireworks animation was created by Eddie Lin. Awesome work!
+* CSS fireworks animation was created by [@Eddie Lin](https://codepen.io/yshlin/pens/public). Awesome work!
 
 ## Contact
 Created by [@MingHsieh](https://www.linkedin.com/in/ming-hsieh-lo/) - feel free to contact me!
